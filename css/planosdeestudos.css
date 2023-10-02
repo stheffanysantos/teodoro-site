@@ -28,7 +28,7 @@ body{
     height: 100vh;                                                    
 }
 #a3body {
-    color: white;
+
     font-style:'Sarala', sans-serif;
     background-color: #275597;
  width: 100%;
@@ -128,7 +128,7 @@ body {
 }
 
 .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
+    transform: scaleX(1.0) scaleY(1.4);
     opacity: 0;
 }
 

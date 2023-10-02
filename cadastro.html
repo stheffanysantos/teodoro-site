@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crie Sua Conta</title>
-  <link rel="stylesheet" href="planosdeestudos.css">
+  <link rel="stylesheet" href="css/planosdeestudos.css">
 </head>
 <body id="a3body">
   <div id="a4div">
@@ -13,16 +13,31 @@
  
   <form action="index.html" method="post">
     <label> Usuário: <input type="text" name="username"></label>
-  <br> <br> <label>Senha: <input type="password" name="password"></label>
-  <br><br>  <label>Digite a senha novamente:  <input type="password" name="password"></label>
+  <br> <br> <label>Senha: <input type="password" name="password" id="senha1"></label>
+  <br><br>  <label>Digite a senha novamente:  <input type="password" name="password" id="senha2"></label>
   
   
  <br> <br><div class="text-box">
-  <a href="materias.html" class="btn btn-white btn-animate">Criar</a>
+  <a class="btn btn-white btn-animate" onclick="usuario()">Criar</a>
 </div>
-  
-
   </forms>
 </div>
+<p id="resposta"></p>
+<script>
+  function usuario(){
+    var senha1 = document.getElementById("senha1").value;
+    var senha2 = document.getElementById("senha2").value;
+    var url = window.Location.href
+    var resposta = document.getElementById("resposta");
+
+    if (senha1 == senha2){
+      resposta.textContent= "Cadastro efetuado ;)"
+      window.location.href = "materias.html";
+    }
+    else{
+      resposta.textContent = "SENHAS DIFERNETES! ERRO NO CADASTRO."
+    }
+  }
+</script>
 </body>
 </html>

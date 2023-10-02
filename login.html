@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="planosdeestudos.css">
+  <link rel="stylesheet" href="css/planosdeestudos.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Entrar</title>
@@ -16,27 +16,34 @@
     <p><h3>Login</h3></p>
 
     <form action="index.html" method="post">
-      <label>Usuário: <input type="text" name="username"></label>
-      <p><br><label>Senha: <input type="password" name=userpass></label>
+      <label>Usuário: <input type="text" name="username" id="username"></label>
+      <p><br><label>Senha: <input type="password" name=userpass id="senha"></label>
       <p> <div class="text-box">
         
-        <a href="materias.html" class="btn btn-white btn-animate">Entrar </a>
+        <a href="materias.html" class="btn btn-white btn-animate" onclick="entrar()">Entrar </a>
     </div></p>
       <p><div class="text-box">
         <a href="cadastro.html" class="btn btn-white btn-animate">Crie sua conta</a>
     </div>
             <h4></h4>
           </p>
-
-
-
-
-
-
-
-
-          </forms>
+    </forms>
   </div>
+  <p id="resposta"></p>
+  <script>
+    function entrar(){
+      var username = document.getElementById("username").value;
+      var senha = document.getElementById("senha").value;
+      var resposta = document.getElementById("resposta");
+    
+      if (username == senha){
+        resposta.textContent="Erro ! o usuário e senha não podem ser os mesmos."
+      }
+      else{
+        resposta.textContent="login efetuado ;)"
+      }
+    }
+  </script>
 </body>
 
 </html>
